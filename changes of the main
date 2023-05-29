@@ -1,0 +1,68 @@
+ static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            // recipe menu
+            RecipeManager recipeManager = new RecipeManager();
+
+            while (true)
+            {
+                Console.WriteLine("\n--- WELCOME TO OUR RECIPE ---");
+                Console.WriteLine("1. Press 1 to make a new recipe\n" +
+                                  "\"2. Press 2 to display the  recipe list\n" +
+                                  "3. Press 3 to scale the factor of the recipe" +
+                                  "4. Press 0 to Exit.");
+               
+
+                Console.Write("Please enter your choice: ");
+                string choice = Console.ReadLine();
+                ///recipe menu
+                if (choice == "1")
+                {
+                    Console.Write("Please enter  the recipe name: ");
+                    string name = Console.ReadLine();
+                    Recipe recipe = new Recipe(name);
+
+                    while (true)
+                    {
+                        Console.WriteLine("\n--- OUR INGREDIENTS--");
+                        Console.WriteLine("1.  Press 1 to add ingredient\n" +
+                                          "2. Press 2 to add steps\n" +
+                                          "3.Press 0 to go back to the memu");
+
+                        Console.Write(" Please enter your choice: ");
+                        string Choice = Console.ReadLine();
+
+                        if (Choice == "1")
+                        {
+                            Console.Write("Please enter ingredient name: ");
+                            string ingredientName = Console.ReadLine();
+                            Console.Write("Please enter  the quantity: ");
+                            double quantity = double.Parse(Console.ReadLine());
+                            Console.Write("Please enter the units of the measurement: ");
+                            string unit = Console.ReadLine();
+                            Console.Write("Please enter  the calories: ");
+                            int calories = int.Parse(Console.ReadLine());
+                            Console.Write("Please enter food group: ");
+                            string foodGroup = Console.ReadLine();
+                            Console.WriteLine("Your recipe will be done shortly!:");
+
+                            recipe.AddIngredient(ingredientName, quantity, unit, calories, foodGroup);
+                        }
+                        else if (Choice == "2")
+                        {
+                            Console.Write("Please enter step description: ");
+                            string step = Console.ReadLine();
+                            recipe.AddStep(step);
+                            Console.WriteLine("Scale factor: 0.5, 2, or 3?");
+                            double scale = double.Parse(Console.ReadLine());
+
+                        }
+                        else if (Choice == "0")
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine(" SORRY!. You've entered a Invalid choice.");
+                        }
+                    }
