@@ -1,0 +1,7 @@
+ public Recipe(string name)
+        {
+            Name = name;
+            Ingredients = new List<Ingredients>();
+            Steps = new List<string>();
+        }
+        
