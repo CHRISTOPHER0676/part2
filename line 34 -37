@@ -1,0 +1,3 @@
+  {
+            return Ingredients.Sum(ingredient => ingredient.Calories);
+        }
