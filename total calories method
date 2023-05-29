@@ -1,0 +1,9 @@
+ public void NotifyCalorieLimit(Recipe recipe)
+        {
+            int totalCalories = recipe.GetTotalCalories();
+           // for (int i = 0; i < GetTotalCalories; i++)
+                if (totalCalories > 300)
+            {
+                Console.WriteLine("Warning: The calories of this recipe should NOT exceed 300!");
+            }
+        }
