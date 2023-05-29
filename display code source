@@ -1,0 +1,10 @@
+  public void DisplayRecipeList()
+        {
+            var sortedRecipes = recipes.OrderBy(recipe => recipe.Name);
+            Console.WriteLine("\n---OUR RECIPE LIST ---");
+            int i = 1;
+            foreach (var recipe in sortedRecipes)
+            {
+                Console.WriteLine($"{i++}. {recipe.Name}");
+            }
+        }
