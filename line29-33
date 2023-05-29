@@ -1,0 +1,7 @@
+  public void AddStep(string description)
+        {
+            Steps.Add(description);
+        }
+        //this method is for the calories
+        public int GetTotalCalories()
+      
