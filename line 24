@@ -1,0 +1,4 @@
+ public void AddIngredient(string name, double quantity, string unit, int calories, double factor,string foodGroup)
+        {
+            Ingredients.Add(new Ingredients(name, quantity, unit, calories, factor , foodGroup));
+        }
