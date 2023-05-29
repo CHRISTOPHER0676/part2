@@ -1,0 +1,3 @@
+
+        public int RecipeCount { get; internal set; }
+        //public int GetTotalCalories { get; private set; }
